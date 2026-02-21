@@ -4,10 +4,327 @@
 <head>
     <title>Assignment 03</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Test</h1>
+    <main>
+
+    <section class="info">
+        <h1>Job Application Tracker</h1>
+        <dl class="info_data">
+            <div>
+                <dt>Total</dt>
+                <dd class="jobs_total">8</dd>
+            </div>
+
+            <div>
+                <dt>Interview</dt>
+                <dd class="jobs_interview">0</dd>
+            </div>
+
+            <div>
+                <dt>Rejected</dt>
+                <dd class="jobs_rejected">0</dd>
+            </div>
+        </dl>
+    </section>
+
+    <hr class="separator">
+
+    <section class="listing">
+        <div class="header">
+            <h2>Available Jobs</h2>
+            <p class="jobs_visible">8 Jobs</p>
+        </div>
+
+        <div class="tab_list">
+            <div id="tabs">
+                <button class="tab_selected">All</button>
+                <button>Interview</button>
+                <button>Rejected</button>
+            </div>
+
+            <!-- Promise it's not chatgpt generated, I did ask chatgpt about semantic HTML as I have some prior experience with webdev and i know semantic html is important, I just tried to find the best semantic structure for this with the help of chatgpt, tried to learn why they're the best and tried to use them here. Source: Chalaiden :D -->
+            <ul class="tab_panels all_jobs">
+                <li>
+                    <article class="job">
+                        <header>
+                            <div class="job_info">
+                                <h3>React Native Developer</h3>
+                                <p>Mobile First Corp</p>
+                            </div>
+                            <form class="delete_form">
+                                <button type="submit" aria-label="Delete Job"></button>
+                            </form>
+                        </header>
+                        <ul class="job_benefits">
+                            <li>Remote</li>
+                            <li>Full-time</li>
+                            <li>
+                                <data value="130000-170000">$130,000 - $170,000</data>
+                            </li>
+                        </ul>
+                        <div class="job_thingy">
+                            <output class="job_status">Not Applied</output>
+                            <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+                        <form class="update_form">
+                            <button class="interview" name="status" type="submit" value="Interview">Interview</button>
+                            <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                        </form>
+                    </article>
+                </li>
+
+                <li>
+                  <article class="job">
+                    <header>
+                      <div class="job_info">
+                        <h3>Web Designer & Developer</h3>
+                        <p>WebFlow Agency</p>
+                      </div>
+                      <form class="delete_form">
+                        <button type="submit" aria-label="Delete Job"></button>
+                      </form>
+                    </header>
+
+                    <ul class="job_benefits">
+                      <li>Los Angeles, CA</li>
+                      <li>Part-time</li>
+                      <li>
+                        <data value="80000-120000">$80,000 - $120,000</data>
+                      </li>
+                    </ul>
+
+                    <div class="job_thingy">
+                      <output class="job_status">Not Applied</output>
+                      <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    </div>
+
+                    <form class="update_form">
+                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                    </form>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="job">
+                    <header>
+                      <div class="job_info">
+                        <h3>Data Visualization Specialist</h3>
+                        <p>DataViz Solutions</p>
+                      </div>
+                      <form class="delete_form">
+                        <button type="submit" aria-label="Delete Job"></button>
+                      </form>
+                    </header>
+
+                    <ul class="job_benefits">
+                      <li>Boston, MA</li>
+                      <li>Full-time</li>
+                      <li>
+                        <data value="125000-165000">$125,000 - $165,000</data>
+                      </li>
+                    </ul>
+
+                    <div class="job_thingy">
+                      <output class="job_status">Not Applied</output>
+                      <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                    </div>
+
+                    <form class="update_form">
+                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                    </form>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="job">
+                    <header>
+                      <div class="job_info">
+                        <h3>Backend Developer</h3>
+                        <p>CloudFirst Inc</p>
+                      </div>
+                      <form class="delete_form">
+                        <button type="submit" aria-label="Delete Job"></button>
+                      </form>
+                    </header>
+
+                    <ul class="job_benefits">
+                      <li>Seattle, WA</li>
+                      <li>Full-time</li>
+                      <li>
+                        <data value="140000-190000">$140,000 - $190,000</data>
+                      </li>
+                    </ul>
+
+                    <div class="job_thingy">
+                      <output class="job_status">Not Applied</output>
+                      <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    </div>
+
+                    <form class="update_form">
+                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                    </form>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="job">
+                    <header>
+                      <div class="job_info">
+                        <h3>Senior Frontend Developer</h3>
+                        <p>TechCorp Industries</p>
+                      </div>
+                      <form class="delete_form">
+                        <button type="submit" aria-label="Delete Job"></button>
+                      </form>
+                    </header>
+
+                    <ul class="job_benefits">
+                      <li>San Francisco, CA</li>
+                      <li>Full-time</li>
+                      <li>
+                        <data value="130000-175000">$130,000 - $175,000</data>
+                      </li>
+                    </ul>
+
+                    <div class="job_thingy">
+                      <output class="job_status">Not Applied</output>
+                      <p>Build scalable web applications using React and TypeScript. Work with a talented team on cutting-edge projects.</p>
+                    </div>
+
+                    <form class="update_form">
+                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                    </form>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="job">
+                    <header>
+                      <div class="job_info">
+                        <h3>UI/UX Engineer</h3>
+                        <p>Innovation Labs</p>
+                      </div>
+                      <form class="delete_form">
+                        <button type="submit" aria-label="Delete Job"></button>
+                      </form>
+                    </header>
+
+                    <ul class="job_benefits">
+                      <li>Austin, TX</li>
+                      <li>Full-time</li>
+                      <li>
+                        <data value="110000-150000">$110,000 - $150,000</data>
+                      </li>
+                    </ul>
+
+                    <div class="job_thingy">
+                      <output class="job_status">Not Applied</output>
+                      <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                    </div>
+
+                    <form class="update_form">
+                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                    </form>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="job">
+                    <header>
+                      <div class="job_info">
+                        <h3>JavaScript Developer</h3>
+                        <p>MegaCorp Solutions</p>
+                      </div>
+                      <form class="delete_form">
+                        <button type="submit" aria-label="Delete Job"></button>
+                      </form>
+                    </header>
+
+                    <ul class="job_benefits">
+                      <li>New York, NY</li>
+                      <li>Full-time</li>
+                      <li>
+                        <data value="130000-170000">$130,000 - $170,000</data>
+                      </li>
+                    </ul>
+
+                    <div class="job_thingy">
+                      <output class="job_status">Not Applied</output>
+                      <p>Build enterprise applications with JavaScript and modern frameworks. Competitive compensation, health insurance, and professional development opportunities included.</p>
+                    </div>
+
+                    <form class="update_form">
+                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                    </form>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="job">
+                    <header>
+                      <div class="job_info">
+                        <h3>Full Stack Engineer</h3>
+                        <p>StartupXYZ</p>
+                      </div>
+                      <form class="delete_form">
+                        <button type="submit" aria-label="Delete Job"></button>
+                      </form>
+                    </header>
+
+                    <ul class="job_benefits">
+                      <li>Remote</li>
+                      <li>Full-time</li>
+                      <li>
+                        <data value="120000-160000">$120,000 - $160,000</data>
+                      </li>
+                    </ul>
+
+                    <div class="job_thingy">
+                      <output class="job_status">Not Applied</output>
+                      <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Equity package included.</p>
+                    </div>
+
+                    <form class="update_form">
+                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                    </form>
+                  </article>
+                </li>
+            </ul>
+
+            <ul class="tab_panels interview_jobs hidden">
+            </ul>
+
+            <ul class="tab_panels rejected_jobs hidden">
+            </ul>
+
+            <article class="tab_panels no_jobs hidden">
+                <figure>
+                    <img src="./assets/document.png" alt="An icon of a document">
+                </figure>
+
+                <div>
+                    <h4>No Jobs Available</h4>
+                    <p>Check back soon for new job opportunities</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+    </main>
+
+    <script src="./main.js"></script>
 
 </body>
 

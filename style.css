@@ -1,3 +1,262 @@
-h1 {
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Geist", sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8FAFC;
+}
+
+main {
+    max-width: 1110px;
+    margin-inline: auto;
+}
+
+.info {
+    padding-top: 60px;
+    display: grid;
+    gap: 20px;
+}
+
+.info h1 {
+    color: #002C5C;
+    font-size: 2rem;
+}
+
+.info_data {
+    display: flex;
+    gap: 16px;
+}
+
+.info_data div {
+    background-color: #FFFFFF;
+    border: 1px solid #F1F2F4;
+    border-radius: 8px;
+    padding: 20px;
+    display: grid;
+    gap: 16px;
+    flex: 1;
+}
+
+.info_data dt {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #323B49;
+}
+
+.info_data dd {
+    color: #002C5C;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info_data .jobs_interview {
+    color: #10B981;
+}
+
+.info_data .jobs_rejected {
+    color: #EF4444;
+}
+
+.separator {
+    margin-block: 30px;
+    border: 1px solid #E6E7E9;
+}
+
+/* Listing */
+
+.listing .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.listing h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #002C5C;
+}
+
+.listing .jobs_visible {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #64748B;
+}
+
+.tab_list {
+    display: grid;
+    gap: 16px;
+}
+
+#tabs {
+    display: flex;
+    gap: 8px;
+}
+
+#tabs button {
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 80px;
+    color: #64748B;
+    background-color: #FFFFFF;
+    padding: 8px 12px;
+    border: 1px solid #F1F2F4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#tabs .tab_selected {
+    color: #FFFFFF;
+    background-color: #3B82F6;
+}
+
+.tab_panels {
+    display: grid;
+    gap: 16px;
+}
+
+.tab_panels li {
+    list-style: none;
+}
+
+.job {
+    background-color: #FFFFFF;
+    border: 1px solid #F1F2F4;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+    gap: 20px;
+    justify-items: start;
+}
+
+.job header {
+    display: flex;
+    justify-content: space-between;
+    justify-self: stretch;
+    align-items: center;
+    margin: unset;
+}
+
+.job_info {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.job_info p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #002C5C;
+    line-height: 26px;
+}
+
+.job_info h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    color: #64748B;
+}
+
+.job_benefits {
+    display: flex;
+    gap: 30px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #64748B;
+}
+
+.job_benefits li:not(:first-child) {
+    list-style: disc;
+}
+
+.job_thingy {
+    display: grid;
+    gap: 8px;
+    justify-items: start;
+}
+
+.job_status {
+    background-color: #EEF4FF;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #002C5C;
+    text-transform: uppercase;
+}
+
+.job_thingy p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #323B49;
+}
+
+.update_form button {
+    --color: #10B981;
+    color: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.update_form .rejected {
+    --color: #EF4444;
+}
+
+.delete_form button {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 100%;
+    border: 1px solid #F1F2F4;
+    background-color: white;
+    background-image: url("./assets/delete.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.no_jobs {
+    min-height: 400px;
+    background-color: #FFFFFF;
+    border: 1px solid #F1F2F4;
+    border-radius: 8px;
+    padding: 60px 40px;
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    align-content: center;
+}
+
+.no_jobs div {
+    display: grid;
+    justify-items: center;
+}
+
+.no_jobs h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: #002C5C;
+}
+
+.no_jobs p {
+    font-size: 1rem;
+    line-height: 22px;
+    color: #64748B;
+}
+
+.hidden {
+    display: none;
 }
