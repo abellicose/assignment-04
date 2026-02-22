@@ -3,6 +3,7 @@
 
 <head>
     <title>Assignment 03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,19 +38,19 @@
     <section class="listing">
         <div class="header">
             <h2>Available Jobs</h2>
-            <p class="jobs_visible">8 Jobs</p>
+            <p id="jobs_visible">8 Jobs</p>
         </div>
 
         <div class="tab_list">
             <div id="tabs">
-                <button class="tab_selected">All</button>
-                <button>Interview</button>
-                <button>Rejected</button>
+                <button class="tabs_btn tab_selected">All</button>
+                <button class="tabs_btn">Interview</button>
+                <button class="tabs_btn">Rejected</button>
             </div>
 
             <!-- Promise it's not chatgpt generated, I did ask chatgpt about semantic HTML as I have some prior experience with webdev and i know semantic html is important, I just tried to find the best semantic structure for this with the help of chatgpt, tried to learn why they're the best and tried to use them here. Source: Chalaiden :D -->
             <ul class="tab_panels all_jobs">
-                <li>
+                <li data-id="1">
                     <article class="job">
                         <header>
                             <div class="job_info">
@@ -72,13 +73,13 @@
                             <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                         </div>
                         <form class="update_form">
-                            <button class="interview" name="status" type="submit" value="Interview">Interview</button>
-                            <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                            <button class="interview" name="status" type="submit" value="interview">Interview</button>
+                            <button class="rejected" name="status" type="submit" value="rejected">Rejected</button>
                         </form>
                     </article>
                 </li>
 
-                <li>
+                <li data-id="2">
                   <article class="job">
                     <header>
                       <div class="job_info">
@@ -104,13 +105,13 @@
                     </div>
 
                     <form class="update_form">
-                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
-                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                      <button class="interview" name="status" type="submit" value="interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="rejected">Rejected</button>
                     </form>
                   </article>
                 </li>
 
-                <li>
+                <li data-id="3">
                   <article class="job">
                     <header>
                       <div class="job_info">
@@ -136,13 +137,13 @@
                     </div>
 
                     <form class="update_form">
-                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
-                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                      <button class="interview" name="status" type="submit" value="interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="rejected">Rejected</button>
                     </form>
                   </article>
                 </li>
 
-                <li>
+                <li data-id="4">
                   <article class="job">
                     <header>
                       <div class="job_info">
@@ -168,13 +169,13 @@
                     </div>
 
                     <form class="update_form">
-                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
-                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                      <button class="interview" name="status" type="submit" value="interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="rejected">Rejected</button>
                     </form>
                   </article>
                 </li>
 
-                <li>
+                <li data-id="5">
                   <article class="job">
                     <header>
                       <div class="job_info">
@@ -200,13 +201,13 @@
                     </div>
 
                     <form class="update_form">
-                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
-                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                      <button class="interview" name="status" type="submit" value="interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="rejected">Rejected</button>
                     </form>
                   </article>
                 </li>
 
-                <li>
+                <li data-id="6">
                   <article class="job">
                     <header>
                       <div class="job_info">
@@ -232,13 +233,13 @@
                     </div>
 
                     <form class="update_form">
-                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
-                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                      <button class="interview" name="status" type="submit" value="interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="rejected">Rejected</button>
                     </form>
                   </article>
                 </li>
 
-                <li>
+                <li data-id="7">
                   <article class="job">
                     <header>
                       <div class="job_info">
@@ -264,13 +265,13 @@
                     </div>
 
                     <form class="update_form">
-                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
-                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                      <button class="interview" name="status" type="submit" value="interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="rejected">Rejected</button>
                     </form>
                   </article>
                 </li>
 
-                <li>
+                <li data-id="8">
                   <article class="job">
                     <header>
                       <div class="job_info">
@@ -296,8 +297,8 @@
                     </div>
 
                     <form class="update_form">
-                      <button class="interview" name="status" type="submit" value="Interview">Interview</button>
-                      <button class="rejected" name="status" type="submit" value="Rejected">Rejected</button>
+                      <button class="interview" name="status" type="submit" value="interview">Interview</button>
+                      <button class="rejected" name="status" type="submit" value="rejected">Rejected</button>
                     </form>
                   </article>
                 </li>
