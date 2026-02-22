@@ -180,14 +180,24 @@ main {
 }
 
 .job_status {
-    background-color: #EEF4FF;
+    --color: 0, 44, 92;
+    background-color: rgba(var(--color), 25%);
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.25rem;
-    color: #002C5C;
+    color: rgb(var(--color));
+    border: 1px solid rgb(var(--color));
     text-transform: uppercase;
+}
+
+.status_interview {
+    --color: 16, 185, 129;
+}
+
+.status_rejected {
+    --color: 239, 68, 68;
 }
 
 .job_thingy p {

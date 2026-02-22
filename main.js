@@ -5,7 +5,7 @@ const jobCounter = document.getElementsByClassName("jobs_visible")[0];
 let selectedPanel = "all";
 
 tabs.addEventListener("click", (e) => {
-    if (e.target == e.currentTarget) return;
+    if (e.target == e.currentTarget) {console.log("returned"); return};
     for (const tab of tabs.children) {
         tab.classList.remove("tab_selected");
     }
@@ -22,8 +22,11 @@ for (const form of updateForms) {
     form.addEventListener("click", (e) => {
         if (e.target == e.currentTarget) return;
         e.preventDefault();
-        const job = e.target.closest("li");
-        panels[idx[e.target.className]].appendChild(job);
+        const mainElement = e.target.closest("li");
+        const clonedElement = e.target.closest("li").cloneNode(true);
+        updateStatus(mainElement, e.target.className);
+        updateStatus(clonedElement, e.target.className);
+        panels[idx[e.target.className]].appendChild(clonedElement);
         updateTracker();
         updateVisiblePanel();
     });
@@ -60,5 +63,13 @@ function updateVisiblePanel() {
     jobCounter.innerText = `${length} Jobs`;
 
     panels[length == 0 ? 3 : i].classList.remove("hidden");
+}
 
+function updateStatus(element, newStatus) {
+    const status = element.getElementsByTagName("output")[0];
+    for (const st of status.classList) {
+        if(st.startsWith("status_")) status.classList.remove(st)
+    }
+    status.classList.add(`status_${newStatus}`);
+    status.innerText = newStatus;
 }
