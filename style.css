@@ -15,10 +15,10 @@ body {
 main {
     max-width: 1110px;
     margin-inline: auto;
+    padding-block: 60px;
 }
 
 .info {
-    padding-top: 60px;
     display: grid;
     gap: 20px;
 }
@@ -272,8 +272,10 @@ main {
 }
 
 @media (width <= 576px) {
+    main {
+        padding-inline: 20px;
+    }
     .info {
-        padding-top: 20px !important;
         text-align: center;
         padding-inline: 10px;
     }
